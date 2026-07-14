@@ -257,7 +257,7 @@ export default function Home() {
         <div className="footer-bottom">
           <span>© 2026 Kelvin Kyere</span>
           <div>
-            <a href="https://www.linkedin.com/in/586designs" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://www.linkedin.com/in/kelvinkyere" target="_blank" rel="noreferrer">LinkedIn</a>
             <a href="https://www.instagram.com/586designs_/" target="_blank" rel="noreferrer">Instagram</a>
             <a href="https://www.facebook.com/586Designs" target="_blank" rel="noreferrer">Facebook</a>
           </div>
