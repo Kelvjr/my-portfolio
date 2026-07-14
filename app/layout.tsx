@@ -5,8 +5,13 @@ import "./globals.css";
 const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
+const siteUrl = process.env.NEXT_PUBLIC_SITE_URL
+  ?? (process.env.VERCEL_PROJECT_PRODUCTION_URL
+    ? `https://${process.env.VERCEL_PROJECT_PRODUCTION_URL}`
+    : "http://localhost:3000");
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://creative-dev-design-portfolio.kelvinkwasikyere5.chatgpt.site"),
+  metadataBase: new URL(siteUrl),
   title: "Kelvin Kyere — Web Developer & Graphic Designer",
   description: "Kelvin Kyere is a web developer and graphic designer in Tema, Ghana, creating websites, custom digital products, brand identities and mobile app experiences.",
   openGraph: {
