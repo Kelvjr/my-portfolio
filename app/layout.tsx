@@ -13,13 +13,13 @@ export const metadata: Metadata = {
     title: "Kelvin Kyere — Web Developer & Graphic Designer",
     description: "Websites, custom digital products, graphic design and mobile app experiences from Tema, Ghana.",
     type: "website",
-    images: [{ url: "/og.png", width: 1733, height: 909, alt: "Kelvin Kyere, Web Developer and Graphic Designer" }],
+    images: [{ url: "/og.jpg", width: 1731, height: 909, alt: "Kelvin Kyere, Web Developer and Graphic Designer" }],
   },
   twitter: {
     card: "summary_large_image",
     title: "Kelvin Kyere — Web Developer & Graphic Designer",
     description: "Websites, custom digital products, graphic design and mobile app experiences from Tema, Ghana.",
-    images: ["/og.png"],
+    images: ["/og.jpg"],
   },
 };
 
