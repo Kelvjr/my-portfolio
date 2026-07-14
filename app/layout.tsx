@@ -6,8 +6,21 @@ const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
 const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Your Name — Web Developer & Graphic Designer",
-  description: "Independent web developer and graphic designer creating distinctive digital experiences, brand identities and motion-led websites.",
+  metadataBase: new URL("https://creative-dev-design-portfolio.kelvinkwasikyere5.chatgpt.site"),
+  title: "Kelvin Kyere — Web Developer & Graphic Designer",
+  description: "Kelvin Kyere is a web developer and graphic designer in Tema, Ghana, creating websites, custom digital products, brand identities and mobile app experiences.",
+  openGraph: {
+    title: "Kelvin Kyere — Web Developer & Graphic Designer",
+    description: "Websites, custom digital products, graphic design and mobile app experiences from Tema, Ghana.",
+    type: "website",
+    images: [{ url: "/og.png", width: 1733, height: 909, alt: "Kelvin Kyere, Web Developer and Graphic Designer" }],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Kelvin Kyere — Web Developer & Graphic Designer",
+    description: "Websites, custom digital products, graphic design and mobile app experiences from Tema, Ghana.",
+    images: ["/og.png"],
+  },
 };
 
 export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {

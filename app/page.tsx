@@ -1,30 +1,37 @@
 "use client";
 
 import { useEffect, useRef } from "react";
+import Image from "next/image";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const projects = [
   {
     number: "01",
-    title: "Aster House",
-    type: "Brand identity / Web design",
+    title: "Aegis Alerts",
+    type: "Product design / Custom development",
     year: "2026",
-    className: "aster",
+    image: "/work/aegis-mockup.png",
+    href: "https://aegisalerts.online/",
+    alt: "Aegis Alerts consumer verification website shown on a desktop monitor",
   },
   {
     number: "02",
-    title: "Morrow Studio",
-    type: "Creative development / Art direction",
-    year: "2025",
-    className: "morrow",
+    title: "Leti Arts",
+    type: "Website / Interactive experience",
+    year: "2026",
+    image: "/work/leti-mockup.png",
+    href: "https://www.letiarts.com/",
+    alt: "Leti Arts website displayed in desktop and mobile presentation mockups",
   },
   {
     number: "03",
-    title: "Serein Objects",
-    type: "E-commerce / Visual identity",
-    year: "2025",
-    className: "serein",
+    title: "586Designs Collection",
+    type: "Brand identity / Web & mobile design",
+    year: "2024—25",
+    image: "/work/design-mockup.png",
+    href: "https://www.instagram.com/586designs_/",
+    alt: "Three 586Designs projects presented as premium editorial prints",
   },
 ];
 
@@ -132,36 +139,36 @@ export default function Home() {
 
       <div className="loader" aria-hidden="true">
         <div className="loader-word" aria-label="Loading portfolio">
-          {"CREATIVE".split("").map((letter, index) => <span key={`${letter}-${index}`}>{letter}</span>)}
+          {"KELVIN".split("").map((letter, index) => <span key={`${letter}-${index}`}>{letter}</span>)}
         </div>
         <div className="loader-meta">Portfolio / 2026</div>
       </div>
 
       <header className="site-header">
-        <a className="brand magnetic" href="#top" aria-label="Back to top">K.D<span>®</span></a>
+        <a className="brand magnetic" href="#top" aria-label="Kelvin Kyere, back to top">Kelvin Kyere<span>®</span></a>
         <nav aria-label="Main navigation">
           <a href="#work">Work</a>
           <a href="#about">About</a>
           <a href="#contact">Contact</a>
         </nav>
-        <div className="availability"><i /> Available for select projects</div>
+        <div className="availability"><i /> Tema, Ghana / Available worldwide</div>
       </header>
 
       <section className="hero" id="top">
-        <div className="hero-kicker hero-detail">Web developer <span>&amp;</span> graphic designer</div>
-        <h1 aria-label="Digital experiences with character">
-          <span className="hero-line"><span>Digital experiences</span></span>
-          <span className="hero-line italic"><span>with character.</span></span>
+        <div className="hero-kicker hero-detail">Kelvin Kyere <span>—</span> Developer &amp; designer</div>
+        <h1 aria-label="Code, design and ideas made tangible">
+          <span className="hero-line"><span>Code, design &amp; ideas</span></span>
+          <span className="hero-line italic"><span>made tangible.</span></span>
         </h1>
         <div className="hero-bottom">
-          <p className="hero-detail">I combine code, motion and graphic thinking to build identities and websites that feel clear, alive and memorable.</p>
+          <p className="hero-detail">I build thoughtful websites, custom digital products and visual identities that help ambitious ideas move with clarity.</p>
           <a className="round-link hero-detail" href="#work" aria-label="Scroll to selected work">
             <span>Explore work</span><b>↓</b>
           </a>
-          <div className="hero-index hero-detail">(00—03)</div>
+          <div className="hero-index hero-detail">4+ years / 586Designs</div>
         </div>
         <div className="marquee" aria-hidden="true">
-          <div>WEB DEVELOPMENT ✦ BRAND IDENTITY ✦ MOTION DESIGN ✦ WEB DEVELOPMENT ✦ BRAND IDENTITY ✦ MOTION DESIGN ✦&nbsp;</div>
+          <div>WEBSITES ✦ CUSTOM DEVELOPMENT ✦ GRAPHIC DESIGN ✦ MOBILE APP DESIGN ✦ WEBSITES ✦ CUSTOM DEVELOPMENT ✦ GRAPHIC DESIGN ✦ MOBILE APP DESIGN ✦&nbsp;</div>
         </div>
       </section>
 
@@ -170,10 +177,14 @@ export default function Home() {
         <div className="orb orb-two" />
         <p className="eyebrow" data-reveal>(A little about me)</p>
         <div className="about-grid">
-          <h2 data-reveal>I shape bold ideas into <em>useful, beautiful</em> digital things.</h2>
+          <h2 data-reveal>I turn ambitious ideas into <em>useful, beautiful</em> digital products.</h2>
+          <figure className="portrait" data-reveal>
+            <Image src="/kelvin-kyere.jpg" alt="Portrait of Kelvin Kyere" width={1200} height={1200} sizes="(max-width: 820px) 72vw, 24vw" />
+            <figcaption>Kelvin Kyere / Tema, Ghana</figcaption>
+          </figure>
           <div className="about-copy" data-reveal>
-            <p>I’m a multidisciplinary creative working at the intersection of development and design. My process moves freely between strategy, typography, interaction and production.</p>
-            <p>The result is thoughtful work with a strong point of view—and none of the usual friction between designer and developer.</p>
+            <p>I’m Kelvin Kyere, a web developer and graphic designer based in Tema, Ghana. I graduated from the University of Professional Studies, Accra, and have spent more than four years building solutions for brands, businesses and bold new ideas.</p>
+            <p>I work across strategy, interface design, development and visual identity—bridging creative direction and engineering from the first sketch through launch.</p>
             <a href="#services">What I can do <span>↗</span></a>
           </div>
         </div>
@@ -189,17 +200,22 @@ export default function Home() {
         <div className="projects">
           {projects.map((project) => (
             <article className="project-card" key={project.title}>
-              <div className={`project-visual ${project.className}`} role="img" aria-label={`Abstract placeholder artwork for ${project.title}`}>
-                {project.className === "aster" && <><div className="aster-ring" /><div className="aster-type">A</div><p>Space for slow living</p></>}
-                {project.className === "morrow" && <><div className="morrow-disc" /><div className="morrow-name">MORROW<br />STUDIO</div><span>MAKE / MOVE / MATTER</span></>}
-                {project.className === "serein" && <><div className="serein-object" /><p>SEREIN<br />OBJECTS</p><span>№ 08</span></>}
-              </div>
+              <a className="project-visual" href={project.href} target="_blank" rel="noreferrer" aria-label={`Open ${project.title}`}>
+                <Image src={project.image} alt={project.alt} fill sizes="(max-width: 820px) 94vw, 72vw" />
+              </a>
               <div className="project-meta">
                 <span>{project.number}</span>
                 <h3>{project.title}</h3>
                 <p>{project.type}</p>
                 <time>{project.year}</time>
               </div>
+              {project.number === "03" && (
+                <div className="case-links" aria-label="586Designs case studies">
+                  <a href="https://www.instagram.com/p/DIBZycjIeYR/" target="_blank" rel="noreferrer">Grains Depot ↗</a>
+                  <a href="https://www.instagram.com/p/DCjInItobO3/" target="_blank" rel="noreferrer">FormaFrame ↗</a>
+                  <a href="https://www.instagram.com/p/C9fuGfmou1d/" target="_blank" rel="noreferrer">Smart Home App ↗</a>
+                </div>
+              )}
             </article>
           ))}
         </div>
@@ -212,9 +228,10 @@ export default function Home() {
         </div>
         <div className="service-list">
           {[
-            ["01", "Creative development", "Responsive websites / Creative coding / GSAP motion / CMS integration"],
-            ["02", "Graphic & web design", "Art direction / UI & UX / Editorial systems / Design systems"],
-            ["03", "Brand identity", "Visual strategy / Typography / Campaigns / Social assets"],
+            ["01", "Website design", "Responsive UI & UX / Interactive prototypes / Design systems / Conversion-focused experiences"],
+            ["02", "Custom development", "Frontend & backend builds / Creative coding / GSAP motion / CMS and API integrations"],
+            ["03", "Graphic design", "Brand identity / Campaigns / Social content / Editorial and marketing assets"],
+            ["04", "Mobile app design", "Product strategy / User flows / Interface design / High-fidelity prototypes"],
           ].map(([number, title, copy]) => (
             <article data-reveal key={number}>
               <span>{number}</span><h3>{title}</h3><p>{copy}</p><b>↗</b>
@@ -227,7 +244,7 @@ export default function Home() {
         <div className="manifesto-track" aria-hidden="true">DESIGN WITH INTENT — BUILD WITH CARE —&nbsp;</div>
         <div className="manifesto-note" data-reveal>
           <span>Currently</span>
-          <p>Independent creative<br />Based in your city<br />Working worldwide</p>
+          <p>Independent creative<br />Based in Tema, Ghana<br />Working worldwide</p>
         </div>
       </section>
 
@@ -236,10 +253,14 @@ export default function Home() {
           <p className="eyebrow">(Let’s make something good)</p>
           <h2>Have a project<br />in mind? <em>Say hello.</em></h2>
         </div>
-        <a className="email-link" href="mailto:hello@yourname.com">hello@yourname.com <span>↗</span></a>
+        <a className="email-link" href="mailto:kelvinkwasikyere5@gmail.com">kelvinkwasikyere5@gmail.com <span>↗</span></a>
         <div className="footer-bottom">
-          <span>© 2026 Your Name</span>
-          <div><a href="#">LinkedIn</a><a href="#">Instagram</a><a href="#">Behance</a></div>
+          <span>© 2026 Kelvin Kyere</span>
+          <div>
+            <a href="https://www.linkedin.com/in/586designs" target="_blank" rel="noreferrer">LinkedIn</a>
+            <a href="https://www.instagram.com/586designs_/" target="_blank" rel="noreferrer">Instagram</a>
+            <a href="https://www.facebook.com/586Designs" target="_blank" rel="noreferrer">Facebook</a>
+          </div>
           <a href="#top">Back to top ↑</a>
         </div>
       </footer>
