@@ -1,0 +1,341 @@
+dialog.project-modal.is-grains {
+  background: #f5f5f5;
+  color: #1a1a1a;
+}
+.is-grains .project-modal-close {
+  background: #4caf50;
+  color: #fff;
+  border: 1px solid #3d8b40;
+  border-radius: 100px;
+  padding: 13px 22px;
+}
+.grains-case {
+  font-family: "PP Neue Montreal", Arial, sans-serif;
+  overflow: clip;
+}
+.project-modal .grains-case p,
+.project-modal .grains-case dt {
+  color: inherit;
+  font-family: inherit;
+}
+.project-modal .grains-case dl,
+.project-modal .grains-case h2 {
+  font-family: inherit;
+}
+.grains-case p {
+  font-size: clamp(16px, 1.5vw, 21px);
+  line-height: 1.55;
+  text-transform: none;
+  font-weight: 400;
+  max-width: 58ch;
+  margin: 0;
+}
+.grains-case h3 {
+  font-size: clamp(35px, 4.4vw, 72px);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+  text-transform: none;
+  margin: 0 0 30px;
+  font-weight: 500;
+}
+.grains-case h4 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 24px 0 14px;
+}
+.grains-case img {
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+.grains-case .grains-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+}
+.grains-intro {
+  padding: 100px 6vw 46px;
+}
+.grains-case .grains-intro h2 {
+  font-size: clamp(80px, 20vw, 320px);
+  line-height: 0.88;
+  letter-spacing: -0.075em;
+  margin: 38px 0 46px;
+  font-weight: 500;
+}
+.grains-deck {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 8vw;
+}
+.grains-case .grains-deck > p {
+  font-size: clamp(28px, 3vw, 48px);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+.grains-case .grains-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 30px 0 0;
+  margin: 52px 0 0;
+  border-top: 1px solid #1a1a1a35;
+}
+.grains-case dt {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.65;
+  margin-bottom: 10px;
+}
+.grains-case dd {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+.grains-hero-visual {
+  position: relative;
+  padding: 9% 16% 11% 8%;
+  background: #1a1a1a;
+  color: #4caf50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.grains-hero-img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+.grains-visual-label,
+.grains-visual-foot {
+  position: absolute;
+  left: 6vw;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+.grains-visual-label {
+  top: 32px;
+}
+.grains-visual-foot {
+  bottom: 30px;
+}
+.grains-editorial {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5vw;
+  padding: 100px 6vw 70px;
+}
+.grains-editorial > .grains-eyebrow {
+  padding-top: 8px;
+}
+.grains-callouts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4vw;
+  padding: 0 6vw 90px;
+}
+.grains-callouts > div {
+  border-top: 1px solid #1a1a1a40;
+  padding-top: 20px;
+}
+.grains-callouts span {
+  font-size: 12px;
+}
+.grains-case .grains-callouts p {
+  font-size: 16px;
+}
+.grains-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+.grains-tags span {
+  border: 1px solid #1a1a1a50;
+  border-radius: 50px;
+  padding: 10px 16px;
+  font-size: 12px;
+}
+.grains-logo-showcase {
+  margin: 0;
+  padding: 6vw;
+  background: #fff;
+}
+.grains-logo-grid {
+  display: flex;
+  justify-content: center;
+}
+.grains-logo-grid img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+.grains-design-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 0 6vw 40px;
+}
+.grains-type-card {
+  background: #e8e8e8;
+  padding: 35px;
+}
+.grains-type-card strong {
+  display: block;
+  font-size: clamp(100px, 15vw, 200px);
+  font-weight: 500;
+  letter-spacing: -0.07em;
+  color: #4caf50;
+}
+.grains-type-card h4 {
+  font-size: 40px;
+  margin-top: 0;
+}
+.grains-case .grains-type-card p {
+  font-size: 16px;
+}
+.grains-colors {
+  display: flex;
+  flex-direction: column;
+}
+.grains-colors > div {
+  flex: 1;
+  min-height: 110px;
+  padding: 24px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.grains-colors small {
+  font-size: 10px;
+  padding-top: 12px;
+}
+.grains-showcase-full {
+  position: relative;
+  overflow: hidden;
+  background: #1a1a1a;
+  margin: 0 6vw 40px;
+}
+.grains-showcase-full img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.grains-showcase-full span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 24px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  background: linear-gradient(transparent, rgba(26, 26, 26, 0.85));
+  color: #4caf50;
+}
+.grains-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4vw;
+  padding: 0 6vw 90px;
+}
+.grains-experience-card {
+  border-top: 1px solid #1a1a1a40;
+  padding-top: 20px;
+}
+.grains-experience-card h4 {
+  font-size: 20px;
+  margin: 16px 0 12px;
+}
+.grains-case .grains-experience-card p {
+  font-size: 15px;
+}
+.grains-outcome {
+  background: #e8e8e8;
+  padding: 85px 6vw 30px;
+}
+.grains-outcome h3 {
+  margin-top: 40px;
+}
+.grains-lessons {
+  margin-top: 45px;
+  max-width: 760px;
+}
+.grains-case .grains-lessons p {
+  border-top: 1px solid #1a1a1a35;
+  padding: 18px 0;
+  font-size: 18px;
+  max-width: none;
+}
+.grains-lessons span {
+  font-size: 11px;
+  margin-right: 25px;
+}
+.grains-endnote {
+  margin-top: 80px;
+  border-top: 1px solid #1a1a1a35;
+  padding-top: 25px;
+  font-size: 11px;
+}
+@media (max-width: 760px) {
+  .grains-intro {
+    padding: 95px 6vw 32px;
+  }
+  .grains-deck {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .grains-case .grains-meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 18px;
+    margin-top: 35px;
+  }
+  .grains-hero-visual {
+    padding: 85px 6% 90px;
+  }
+  .grains-hero-img {
+    max-width: 300px;
+  }
+  .grains-visual-label,
+  .grains-visual-foot {
+    font-size: 8px;
+  }
+  .grains-editorial {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 60px 6vw 38px;
+  }
+  .grains-callouts {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 55px;
+  }
+  .grains-case h4 {
+    margin-top: 15px;
+  }
+  .grains-design-grid {
+    grid-template-columns: 1fr;
+  }
+  .grains-showcase-full {
+    margin: 0 6vw 28px;
+  }
+  .grains-experience-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 55px;
+  }
+  .grains-outcome {
+    padding-top: 55px;
+  }
+  .grains-case .grains-lessons p {
+    font-size: 16px;
+  }
+  .grains-case .grains-intro h2 {
+    margin-top: 30px;
+  }
+}

@@ -1,0 +1,371 @@
+dialog.project-modal.is-kasvin {
+  background: #f0e6c8;
+  color: #1e3b34;
+}
+.is-kasvin .project-modal-close {
+  background: #1e3b34;
+  color: #fae3af;
+  border: 1px solid #3d5a4a;
+  border-radius: 100px;
+  padding: 13px 22px;
+}
+.kasvin-case {
+  font-family: "PP Neue Montreal", Arial, sans-serif;
+  overflow: clip;
+}
+.project-modal .kasvin-case p,
+.project-modal .kasvin-case dt {
+  color: inherit;
+  font-family: inherit;
+}
+.project-modal .kasvin-case dl,
+.project-modal .kasvin-case h2 {
+  font-family: inherit;
+}
+.kasvin-case p {
+  font-size: clamp(16px, 1.5vw, 21px);
+  line-height: 1.55;
+  text-transform: none;
+  font-weight: 400;
+  max-width: 58ch;
+  margin: 0;
+}
+.kasvin-case h3 {
+  font-size: clamp(35px, 4.4vw, 72px);
+  line-height: 1.04;
+  letter-spacing: -0.045em;
+  text-transform: none;
+  margin: 0 0 30px;
+  font-weight: 500;
+}
+.kasvin-case h4 {
+  font-size: 24px;
+  font-weight: 500;
+  line-height: 1.15;
+  margin: 24px 0 14px;
+}
+.kasvin-case img {
+  display: block;
+  height: auto;
+  object-fit: contain;
+}
+.kasvin-case .kasvin-eyebrow {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  line-height: 1.5;
+}
+.kasvin-intro {
+  padding: 100px 6vw 46px;
+}
+.kasvin-case .kasvin-intro h2 {
+  font-size: clamp(80px, 20vw, 320px);
+  line-height: 0.88;
+  letter-spacing: -0.075em;
+  margin: 38px 0 46px;
+  font-weight: 500;
+}
+.kasvin-deck {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 8vw;
+}
+.kasvin-case .kasvin-deck > p {
+  font-size: clamp(28px, 3vw, 48px);
+  line-height: 1.12;
+  letter-spacing: -0.025em;
+}
+.kasvin-case .kasvin-meta {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  padding: 30px 0 0;
+  margin: 52px 0 0;
+  border-top: 1px solid #1e3b3435;
+}
+.kasvin-case dt {
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  opacity: 0.65;
+  margin-bottom: 10px;
+}
+.kasvin-case dd {
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 0;
+}
+.kasvin-hero-visual {
+  position: relative;
+  padding: 9% 16% 11% 8%;
+  background: #1e3b34;
+  color: #fae3af;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.kasvin-hero-img {
+  max-width: 500px;
+  width: 100%;
+  height: auto;
+}
+.kasvin-visual-label,
+.kasvin-visual-foot {
+  position: absolute;
+  left: 6vw;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+}
+.kasvin-visual-label {
+  top: 32px;
+}
+.kasvin-visual-foot {
+  bottom: 30px;
+}
+.kasvin-editorial {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 5vw;
+  padding: 100px 6vw 70px;
+}
+.kasvin-editorial > .kasvin-eyebrow {
+  padding-top: 8px;
+}
+.kasvin-callouts {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4vw;
+  padding: 0 6vw 90px;
+}
+.kasvin-callouts > div {
+  border-top: 1px solid #1e3b3440;
+  padding-top: 20px;
+}
+.kasvin-callouts span {
+  font-size: 12px;
+}
+.kasvin-case .kasvin-callouts p {
+  font-size: 16px;
+}
+.kasvin-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 30px;
+}
+.kasvin-tags span {
+  border: 1px solid #1e3b3450;
+  border-radius: 50px;
+  padding: 10px 16px;
+  font-size: 12px;
+}
+.kasvin-logo-showcase {
+  margin: 0;
+  padding: 6vw;
+  background: #1e3b34;
+}
+.kasvin-logo-grid {
+  display: flex;
+  justify-content: center;
+}
+.kasvin-logo-grid img {
+  max-width: 900px;
+  width: 100%;
+  height: auto;
+}
+.kasvin-design-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 0 6vw 40px;
+}
+.kasvin-type-card {
+  background: #f2f1eb;
+  padding: 35px;
+}
+.kasvin-type-card strong {
+  display: block;
+  font-size: clamp(100px, 15vw, 200px);
+  font-weight: 500;
+  letter-spacing: -0.07em;
+}
+.kasvin-type-card h4 {
+  font-size: 40px;
+  margin-top: 0;
+}
+.kasvin-case .kasvin-type-card p {
+  font-size: 16px;
+}
+.kasvin-colors {
+  display: flex;
+  flex-direction: column;
+}
+.kasvin-colors > div {
+  flex: 1;
+  min-height: 110px;
+  padding: 24px;
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  font-size: 13px;
+}
+.kasvin-colors small {
+  font-size: 10px;
+  padding-top: 12px;
+}
+.kasvin-showcase-item {
+  position: relative;
+  overflow: hidden;
+  background: #1e3b34;
+}
+.kasvin-showcase-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.kasvin-showcase-item span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 24px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  background: linear-gradient(transparent, rgba(30, 59, 52, 0.85));
+  color: #fae3af;
+}
+.kasvin-experience-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 4vw;
+  padding: 0 6vw 90px;
+}
+.kasvin-experience-card {
+  border-top: 1px solid #1e3b3440;
+  padding-top: 20px;
+}
+.kasvin-experience-card h4 {
+  font-size: 20px;
+  margin: 16px 0 12px;
+}
+.kasvin-case .kasvin-experience-card p {
+  font-size: 15px;
+}
+.kasvin-showcase-duo {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 24px;
+  padding: 0 6vw 40px;
+}
+.kasvin-showcase-full {
+  position: relative;
+  overflow: hidden;
+  background: #1e3b34;
+  margin: 0 6vw 40px;
+}
+.kasvin-showcase-full img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.kasvin-showcase-full span {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 24px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  background: linear-gradient(transparent, rgba(30, 59, 52, 0.85));
+  color: #fae3af;
+}
+.kasvin-outcome {
+  background: #f2f1eb;
+  padding: 85px 6vw 30px;
+}
+.kasvin-outcome h3 {
+  margin-top: 40px;
+}
+.kasvin-lessons {
+  margin-top: 45px;
+  max-width: 760px;
+}
+.kasvin-case .kasvin-lessons p {
+  border-top: 1px solid #1e3b3435;
+  padding: 18px 0;
+  font-size: 18px;
+  max-width: none;
+}
+.kasvin-lessons span {
+  font-size: 11px;
+  margin-right: 25px;
+}
+.kasvin-endnote {
+  margin-top: 80px;
+  border-top: 1px solid #1e3b3435;
+  padding-top: 25px;
+  font-size: 11px;
+}
+@media (max-width: 760px) {
+  .kasvin-intro {
+    padding: 95px 6vw 32px;
+  }
+  .kasvin-deck {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+  .kasvin-case .kasvin-meta {
+    grid-template-columns: 1fr 1fr;
+    gap: 24px 18px;
+    margin-top: 35px;
+  }
+  .kasvin-hero-visual {
+    padding: 85px 6% 90px;
+  }
+  .kasvin-hero-img {
+    max-width: 300px;
+  }
+  .kasvin-visual-label,
+  .kasvin-visual-foot {
+    font-size: 8px;
+  }
+  .kasvin-editorial {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding: 60px 6vw 38px;
+  }
+  .kasvin-callouts {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 55px;
+  }
+  .kasvin-case h4 {
+    margin-top: 15px;
+  }
+  .kasvin-design-grid {
+    grid-template-columns: 1fr;
+  }
+  .kasvin-experience-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+    padding-bottom: 55px;
+  }
+  .kasvin-showcase-duo {
+    grid-template-columns: 1fr;
+  }
+  .kasvin-showcase-full {
+    margin: 0 6vw 28px;
+  }
+  .kasvin-outcome {
+    padding-top: 55px;
+  }
+  .kasvin-case .kasvin-lessons p {
+    font-size: 16px;
+  }
+  .kasvin-case .kasvin-intro h2 {
+    margin-top: 30px;
+  }
+}

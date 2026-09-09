@@ -1,0 +1,106 @@
+.skills {
+  height: auto;
+  min-height: 150svh;
+  overflow: visible;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10%;
+  background: #d8cbef;
+  color: #241a32;
+  padding: 80px 8vw 0;
+}
+.skills-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  padding: 35px 0 0 0;
+}
+.skills-intro h2 {
+  font-family: "Monument Extended", sans-serif;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+  font-weight: 800;
+  color: var(--base-200);
+  letter-spacing: 0.02em;
+  line-height: 1.04;
+}
+.skills-intro p {
+  margin-top: 36px;
+  max-width: 34ch;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  color: #514260;
+}
+.skills-accordion {
+  padding: 0 0 35svh;
+}
+.skill-row {
+  border-top: 1px solid #241a3233;
+}
+.skill-row:first-child {
+  border-top: none;
+}
+.skill-row h3 {
+  font: inherit;
+  text-transform: none;
+  letter-spacing: normal;
+}
+.skill-row button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  width: 100%;
+  padding: 35px 0;
+  border: 0;
+  background: none;
+  color: inherit;
+  font-family: "Monument Extended", sans-serif;
+  font-size: clamp(1.2rem, 2.5vw, 1.8rem);
+  font-weight: 800;
+  text-align: left;
+  cursor: pointer;
+  letter-spacing: 0.02em;
+}
+.skill-icon {
+  font-size: 28px;
+  font-weight: 400;
+}
+.skill-panel {
+  overflow: hidden;
+}
+.skill-panel ul {
+  list-style: none;
+  padding: 0 0 35px;
+  display: grid;
+  gap: 20px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  font-weight: 600;
+  color: #514260;
+}
+.skill-row button:focus-visible {
+  outline: 2px solid #5a337b;
+  outline-offset: 5px;
+}
+@media (max-width: 760px) {
+  .skills {
+    display: block;
+    min-height: 0;
+    padding: 80px 7vw;
+  }
+  .skills-intro {
+    min-height: 0;
+    padding: 0 0 55px;
+  }
+  .skills-accordion {
+    padding: 0;
+  }
+  .skill-panel ul {
+    font-size: 16px;
+  }
+  .skill-row button {
+    font-size: clamp(1rem, 4vw, 1.3rem);
+    padding: 25px 0;
+  }
+}

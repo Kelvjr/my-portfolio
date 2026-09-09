@@ -1,18 +1,14 @@
 import { defineConfig, globalIgnores } from "eslint/config";
 import nextVitals from "eslint-config-next/core-web-vitals";
-import nextTs from "eslint-config-next/typescript";
+import nextTypescript from "eslint-config-next/typescript";
 
-const eslintConfig = defineConfig([
+export default defineConfig([
   ...nextVitals,
-  ...nextTs,
-  // Override default ignores of eslint-config-next.
-  globalIgnores([
-    // Default ignores of eslint-config-next:
-    ".next/**",
-    "out/**",
-    "build/**",
-    "next-env.d.ts",
-  ]),
+  ...nextTypescript,
+  // This Pages Router rule does not recognize fonts in the App Router root layout.
+  {
+    files: ["src/app/layout.tsx"],
+    rules: { "@next/next/no-page-custom-font": "off" },
+  },
+  globalIgnores([".next/**", "next-env.d.ts"]),
 ]);
-
-export default eslintConfig;

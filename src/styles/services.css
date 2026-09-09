@@ -1,0 +1,462 @@
+.expertise {
+  height: auto;
+  min-height: 100svh;
+  background: #E8DFF5;
+  color: #171918;
+  font-family: "PP Neue Montreal", Arial, sans-serif;
+  isolation: isolate;
+  padding: 4vh 8vw 5vh 7vw;
+}
+.expertise h2 {
+  position: relative;
+  z-index: 2;
+  font-family: "Monument Extended", sans-serif;
+  font-size: clamp(2.5rem, 5vw, 4rem);
+  font-weight: 800;
+  color: var(--base-200);
+  letter-spacing: 0.02em;
+  line-height: 1;
+  margin: 0;
+  text-transform: uppercase;
+  padding-top: 15vh;
+}
+.expertise-edge,
+.expertise-paper {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+}
+.expertise-edge-left {
+  left: 0;
+  width: 2.4vw;
+  background: #d5a5ac;
+  transform-origin: left;
+}
+.expertise-paper {
+  right: 2.5vw;
+  width: 13vw;
+  background: #f0eee6;
+  transform-origin: right;
+}
+.expertise-edge-right {
+  right: 0;
+  width: 2.5vw;
+  background: #d99e70;
+}
+.expertise-stage {
+  position: relative;
+}
+.expertise-service {
+  display: grid;
+  grid-template-columns: 43% 57%;
+  min-height: 60vh;
+  align-items: center;
+  position: relative;
+  padding: 40px 0;
+}
+.expertise-copy {
+  position: relative;
+  z-index: 2;
+}
+.expertise-number {
+  font-size: 12px;
+  letter-spacing: 0.12em;
+}
+.expertise-copy h3 {
+  font-family: "Monument Extended", sans-serif;
+  font-size: clamp(30px, 3.1vw, 58px);
+  line-height: 1;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+  text-transform: none;
+  max-width: 12ch;
+  margin: 22px 0;
+}
+.expertise-copy ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px 16px;
+  max-width: 390px;
+  padding-right: 15px;
+  font-family: "Quicksand", sans-serif;
+}
+.expertise-copy li {
+  font-size: 13px;
+  font-weight: 600;
+  line-height: 1.35;
+  text-transform: uppercase;
+}
+.expertise-art {
+  height: 100%;
+  min-height: 330px;
+  position: relative;
+}
+.expertise-image {
+  position: absolute;
+  object-fit: cover;
+}
+.expertise-image-0 {
+  width: 78%;
+  height: 76%;
+  top: 3%;
+  left: 2%;
+  clip-path: polygon(0% 0%, 88% 0%, 100% 18%, 100% 100%, 0% 100%);
+}
+.expertise-service-1 .expertise-image-0 {
+  left: 12%;
+  top: 10%;
+  width: 73%;
+}
+.expertise-service-2 .expertise-image-0 {
+  width: 67%;
+  left: 8%;
+  top: 0;
+}
+.expertise-service-3 .expertise-image-0 {
+  width: 84%;
+  height: 66%;
+  top: 6%;
+}
+.expertise-service-4 .expertise-image-0 {
+  left: 13%;
+  width: 70%;
+}
+.expertise-nav {
+  position: relative;
+  z-index: 3;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+.expertise-nav button {
+  border: 0;
+  background: none;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  font-family: "Quicksand", sans-serif;
+  font-size: 12px;
+  text-transform: uppercase;
+  padding: 10px 0;
+  opacity: 0.55;
+}
+.expertise-nav button span {
+  display: inline;
+  font-size: inherit;
+  margin: 0;
+  transition: opacity 0.3s ease;
+}
+.expertise-nav button .expertise-nav-label {
+  opacity: 0;
+  max-width: 0;
+  overflow: hidden;
+  transition:
+    opacity 0.3s ease,
+    max-width 0.3s ease;
+  white-space: nowrap;
+}
+.expertise-nav button[aria-current="true"] .expertise-nav-label {
+  opacity: 1;
+  max-width: 200px;
+}
+.expertise-nav button:hover,
+.expertise-nav button[aria-current="true"] {
+  opacity: 1;
+}
+.expertise-nav button[aria-current="true"] {
+  font-weight: 700;
+  text-decoration: none;
+}
+.expertise-track {
+  height: 1px;
+  background: #17191844;
+  position: relative;
+  margin-top: 14px;
+}
+.expertise-track div {
+  width: 100%;
+  height: 2px;
+  background: #171918;
+  transform-origin: left;
+}
+.expertise-pinned {
+  height: 100svh;
+  display: grid;
+  grid-template-rows: auto 1fr auto auto;
+}
+.expertise-pinned .expertise-stage {
+  min-height: 0;
+}
+.expertise-pinned .expertise-service {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+  padding: 3vh 0;
+}
+.expertise-pinned .expertise-art {
+  min-height: 0;
+}
+.expertise button:focus-visible {
+  outline: 2px solid #171918;
+  outline-offset: 5px;
+}
+@media (max-width: 760px) {
+  .expertise {
+    padding: 24px 7vw 24px;
+  }
+  .expertise h2 {
+    font-size: clamp(2rem, 8vw, 3rem);
+    padding-top: 10vh;
+  }
+  .expertise-service {
+    grid-template-columns: 1fr;
+    grid-template-rows: auto 250px;
+    gap: 18px;
+  }
+  .expertise-pinned .expertise-service {
+    grid-template-rows: auto 1fr;
+    padding: 18px 0;
+  }
+  .expertise-copy h3 {
+    font-size: 29px;
+    max-width: none;
+    margin: 10px 0 14px;
+  }
+  .expertise-copy ul {
+    gap: 6px 12px;
+  }
+  .expertise-copy li {
+    font-size: 10px;
+  }
+  .expertise-art {
+    min-height: 220px;
+  }
+  .expertise-image-0 {
+    width: 68%;
+    left: 10%;
+  }
+  .expertise-nav {
+    gap: 7px;
+    margin-top: 12px;
+  }
+  .expertise-nav button {
+    font-size: 9px;
+    line-height: 1.4;
+  }
+  .expertise-nav button span {
+    margin: 0;
+  }
+  .expertise-nav button .expertise-nav-label {
+    max-width: 0;
+    opacity: 0;
+  }
+  .expertise-nav button[aria-current="true"] .expertise-nav-label {
+    max-width: 100px;
+    opacity: 1;
+  }
+}
+.expertise-pinned {
+  padding: 0;
+  display: block;
+}
+.expertise-pinned > h2 {
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  z-index: 10;
+  pointer-events: none;
+}
+.expertise-pinned .expertise-stage {
+  position: absolute;
+  inset: 0;
+}
+.expertise-pinned .expertise-service {
+  display: block;
+  position: absolute;
+  inset: 0;
+  padding: 0;
+  overflow: hidden;
+}
+.expertise-pinned .expertise-copy {
+  position: absolute;
+  left: 11%;
+  top: 38%;
+  width: 31%;
+  z-index: 1;
+}
+.expertise-pinned .expertise-copy h3 {
+  font-size: clamp(24px, 2.1vw, 40px);
+  max-width: none;
+  margin: 0 0 22px;
+}
+.expertise-pinned .expertise-number {
+  display: none;
+}
+.expertise-pinned .expertise-art {
+  position: absolute;
+  inset: 0;
+  min-height: 0;
+  pointer-events: none;
+}
+.expertise-pinned .expertise-image-0 {
+  left: 0;
+  top: auto;
+  bottom: 17%;
+  right: auto;
+  width: 33%;
+  height: 43%;
+  clip-path: none;
+  transform-origin: left bottom;
+}
+.expertise-pinned .expertise-nav {
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  bottom: 5%;
+  z-index: 10;
+  margin: 0;
+}
+.expertise-pinned .expertise-track {
+  position: absolute;
+  left: 3%;
+  right: 3%;
+  bottom: 4%;
+  z-index: 10;
+  margin: 0;
+}
+.expertise-pinned .expertise-edge,
+.expertise-pinned .expertise-paper {
+  display: none;
+}
+@media (max-width: 760px) {
+  .expertise-pinned > h2 {
+    top: 5%;
+    left: 8%;
+  }
+  .expertise-pinned .expertise-copy {
+    left: 8%;
+    top: 22%;
+    width: 67%;
+  }
+  .expertise-pinned .expertise-copy h3 {
+    font-size: 26px;
+    margin-bottom: 14px;
+  }
+  .expertise-pinned .expertise-image-0 {
+    width: 65%;
+    height: 29%;
+    bottom: 16%;
+  }
+  .expertise-pinned .expertise-nav {
+    left: 6%;
+    right: 4%;
+  }
+}
+
+.expertise-nav button {
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+}
+.expertise-nav button.is-visited .expertise-nav-label {
+  opacity: 1;
+  visibility: visible;
+  max-width: 200px;
+  width: auto;
+  transform: none;
+}
+@media (max-width: 760px) {
+  .expertise-nav button.is-visited .expertise-nav-label {
+    max-width: 100px;
+  }
+}
+
+@media (max-width: 760px) {
+  .expertise-nav button .expertise-nav-label {
+    white-space: normal;
+  }
+}
+@media (max-width: 760px) {
+  .expertise {
+    display: block;
+    height: auto;
+    min-height: 0;
+    padding: 0;
+    overflow: hidden;
+  }
+  .expertise > h2 {
+    padding: 90px 7vw 36px;
+    font-size: clamp(44px, 12vw, 72px);
+  }
+  .expertise-edge,
+  .expertise-paper {
+    display: none;
+  }
+  .expertise-stage {
+    position: relative;
+  }
+  .expertise.expertise-mobile-pinned {
+    overflow: visible;
+  }
+  .expertise-mobile-pinned .expertise-stage {
+    isolation: isolate;
+  }
+  .expertise-mobile-pinned .expertise-service {
+    min-height: 100svh;
+  }
+  .expertise-service {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0;
+    padding: 8px 8px 60px;
+    min-height: 90svh;
+  }
+  .expertise-art {
+    order: -1;
+    position: relative;
+    height: auto;
+    min-height: 0;
+    aspect-ratio: 1.28;
+    width: 88%;
+    margin: 14px auto 0;
+  }
+  .expertise .expertise-image-0 {
+    position: static;
+    display: block;
+    width: 100%;
+    height: 100%;
+    clip-path: none;
+    object-fit: cover;
+  }
+  .expertise-copy {
+    padding: 28px 5vw 0 20vw;
+    position: relative;
+  }
+  .expertise-number {
+    position: absolute;
+    left: 3vw;
+    top: 34px;
+    font-size: 10px;
+  }
+  .expertise-copy h3 {
+    font-size: 27px;
+    max-width: none;
+    margin: 0 0 20px;
+  }
+  .expertise-copy ul {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 0;
+  }
+  .expertise-copy li {
+    font-size: 12px;
+  }
+  .expertise-nav,
+  .expertise-track {
+    display: none;
+  }
+}

@@ -1,0 +1,279 @@
+.projects {
+  height: auto;
+  background: #0d0012;
+  color: #eee;
+  padding: 0 2vw 8vh;
+  font-family: "Quicksand", Arial, sans-serif;
+}
+.projects-heading {
+  padding: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 20px;
+}
+.projects-heading h2 {
+  font-family: "Monument Extended", sans-serif;
+  font-weight: 800;
+  font-size: clamp(1.6rem, 7vw, 2.4rem);
+  color: var(--base-200);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+.projects-heading span {
+  color: #888;
+  font-family: "Quicksand", sans-serif;
+  font-size: 12px;
+}
+.projects-footer {
+  display: none;
+}
+.project {
+  display: grid;
+  grid-template-columns: 60% minmax(0, 1fr);
+  gap: 2vw;
+  align-items: start;
+  padding: 0;
+}
+.project-image {
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  border: 1px solid #202020;
+  margin: 0;
+  min-width: 0;
+  transform-origin: left center;
+}
+.project-image img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.project-info {
+  min-width: 0;
+  padding: 26px 20px 20px 0;
+  position: relative;
+}
+.project-index {
+  display: none;
+}
+.project-info h3 {
+  display: inline;
+  font-family: "Monument Extended", sans-serif;
+  font-size: clamp(26px, 3.4vw, 64px);
+  text-transform: uppercase;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1.05;
+}
+.project-status {
+  display: inline-block;
+  vertical-align: top;
+  margin: 2px 0 0 8px;
+  font-size: 10px;
+  color: #999;
+}
+.project-status a {
+  color: inherit;
+  text-decoration: none;
+  padding: 8px 0;
+}
+.project-status a:hover {
+  color: white;
+}
+.project-status a:focus-visible {
+  outline: 2px solid white;
+  outline-offset: 6px;
+}
+.project-info dl {
+  display: grid;
+  gap: 4px;
+  margin-top: 22px;
+  font-family: "Quicksand", sans-serif;
+}
+.project-info dl div {
+  display: flex;
+  gap: 6px;
+  font-size: 12px;
+  line-height: 1.4;
+  text-transform: uppercase;
+  color: #999;
+}
+.project-info dt {
+  display: none;
+}
+.project-info dl div:last-child dt {
+  display: block;
+}
+.project-info dd {
+  margin: 0;
+}
+.projects .project-description {
+  display: none;
+}
+@media (max-width: 760px) {
+  .projects {
+    padding: 0 18px;
+  }
+  .projects-heading {
+    padding: 28px 0;
+  }
+  .projects-heading span {
+    display: none;
+  }
+  .project {
+    grid-template-columns: 1fr;
+    gap: 0;
+    padding-bottom: 36px;
+  }
+  .project-image {
+    transform-origin: center;
+  }
+  .project-info {
+    padding: 18px 0 12px;
+  }
+  .project-info h3 {
+    font-size: clamp(28px, 7vw, 44px);
+  }
+  .project-info dl {
+    margin-top: 14px;
+  }
+}
+a.project {
+  color: inherit;
+  text-decoration: none;
+}
+.project-info {
+  transform-origin: left top;
+}
+.project:hover h3,
+.project:focus-visible h3 {
+  text-decoration: underline;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 0.12em;
+}
+.project:focus-visible {
+  outline: 2px solid #eee;
+  outline-offset: -2px;
+}
+.project:focus-visible .project-info {
+  opacity: 1 !important;
+}
+.project-image,
+.project-info {
+  transform-origin: center center;
+}
+.project-modal {
+  position: fixed;
+  inset: 0;
+  margin: auto;
+  width: min(960px, calc(100% - 40px));
+  max-height: 88svh;
+  padding: 0;
+  border: 1px solid #333;
+  background: #0c0c0c;
+  color: #eee;
+  font-family: "PP Neue Montreal", Arial, sans-serif;
+  overscroll-behavior: contain;
+}
+.project-modal::backdrop {
+  background: rgb(0 0 0 / 0.82);
+  backdrop-filter: blur(8px);
+}
+.project-modal-close {
+  position: sticky;
+  top: 16px;
+  float: right;
+  margin: 16px 16px -56px 0;
+  z-index: 1;
+  border: 1px solid #555;
+  padding: 10px 16px;
+  background: #111;
+  color: #fff;
+  cursor: pointer;
+  font: inherit;
+}
+.project-modal h2 {
+  font-family: "Monument Extended", sans-serif;
+  font-size: clamp(32px, 5vw, 64px);
+  font-weight: 800;
+  margin: 18px 0 24px;
+  letter-spacing: -0.02em;
+}
+.project-modal p {
+  text-transform: none;
+  font-family: "Quicksand", sans-serif;
+  font-size: 18px;
+  line-height: 1.6;
+  max-width: 55ch;
+  color: #bbb;
+}
+.project-modal dl {
+  margin-top: 32px;
+  padding-top: 24px;
+  border-top: 1px solid #333;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  font-family: "Quicksand", sans-serif;
+  font-size: 14px;
+  line-height: 1.5;
+}
+.project-modal dt {
+  color: #999;
+  margin-bottom: 8px;
+}
+.project-modal dd {
+  margin: 0;
+}
+.project-modal :focus-visible {
+  outline: 2px solid #fff;
+  outline-offset: 3px;
+}
+@media (max-width: 600px) {
+  .project-modal {
+    width: calc(100% - 24px);
+    max-height: 92svh;
+  }
+  .project-modal dl {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+.project {
+  transform-origin: left center;
+}
+dialog.project-modal {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  max-width: none;
+  height: 100dvh;
+  max-height: none;
+  margin: 0;
+  border: 0;
+  border-radius: 0;
+  padding: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  overscroll-behavior: contain;
+  scrollbar-gutter: stable;
+}
+.project-modal-close {
+  position: fixed;
+  top: 24px;
+  right: 28px;
+  float: none;
+  margin: 0;
+  z-index: 5;
+}
+@media (max-width: 760px) {
+  .project-modal-close {
+    top: 16px;
+    right: 20px;
+  }
+}
+.detail-scroll-content {
+  min-height: 100%;
+  position: relative;
+}

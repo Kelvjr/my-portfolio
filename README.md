@@ -1,98 +1,65 @@
-# vinext-starter
+# Kelvin Kyere portfolio
 
-A clean full-stack starter running on
-[vinext](https://github.com/cloudflare/vinext), with optional Cloudflare D1 and
-Drizzle support.
+Next.js App Router application preserving the original portfolio design, GSAP scroll choreography, WebGL gradients, portrait fluid effect, project case studies, and responsive service panels.
 
-## Prerequisites
+## Development
 
-- Node.js `>=22.13.0`
+Use Node.js 20.9 or newer (validated with Node 24).
 
-## Quick Start
-
-```bash
-npm install
+```sh
+npm ci
 npm run dev
+```
+
+Open http://localhost:3000. No environment variables or external backend are required.
+
+```sh
+npm run typecheck
+npm run lint
 npm run build
+npm start
 ```
 
-This starter does not use `wrangler.jsonc`.
+Run `npm test` with a development or production server running on port 3000. To use another server, set `TEST_BASE_URL` (for example `http://127.0.0.1:3001`). Tests check server-rendered content, metadata, anchors, every media URL, duplicate and unreferenced media, CV bytes and redirect, image optimization, and 404 behavior.
 
-## Included Shape
+## Where to make changes
 
-- edit site code under `app/`
-- `.openai/hosting.json` declares optional Sites D1 and R2 bindings
-- `vite.config.ts` simulates declared bindings for local development
-- `db/schema.ts` starts intentionally empty
-- `examples/d1/` contains an optional D1 example surface
-- `drizzle.config.ts` supports local migration generation when needed
+- `src/app/page.tsx`: page composition. The page and layout are Server Components.
+- `src/data/projects.ts`: project cards. Add a project object to add a card. For an authored case study, add its Server Component to the registry in `Projects.tsx`.
+- `src/data/services.ts`, `skills.ts`, `galleryImages.ts`: service content, skills, and closing gallery.
+- `src/data/navigation.ts`: menu destinations and social URLs. Existing social URLs are platform homepages; replace with personal profile URLs when available.
+- `src/data/*-case.ts`: repeated case-study copy. `CaseSections.tsx` supplies shared editorial sections, metadata, callouts, and tags. Unique visual compositions remain in each case-study component.
+- `src/components/hero/Hero.tsx`: introduction and about copy.
+- `src/styles/`: plain CSS split by section, preserving the original cascade and breakpoints. No Tailwind or UI framework is required.
 
-## Workspace Auth Headers
+## Media
 
-OpenAI workspace sites can read the current user's email from
-`oai-authenticated-user-email`.
+All public assets are part of this same project:
 
-SIWC-authenticated workspace sites may also receive
-`oai-authenticated-user-full-name` when the user's SIWC profile has a non-empty
-`name` claim. The full-name value is percent-encoded UTF-8 and is accompanied by
-`oai-authenticated-user-full-name-encoding: percent-encoded-utf-8`.
-
-Treat the full name as optional and fall back to email when it is absent:
-
-```tsx
-import { headers } from "next/headers";
-
-export default async function Home() {
-  const requestHeaders = await headers();
-  const email = requestHeaders.get("oai-authenticated-user-email");
-  const encodedFullName = requestHeaders.get("oai-authenticated-user-full-name");
-  const fullName =
-    encodedFullName &&
-    requestHeaders.get("oai-authenticated-user-full-name-encoding") ===
-      "percent-encoded-utf-8"
-      ? decodeURIComponent(encodedFullName)
-      : null;
-
-  const displayName = fullName ?? email;
-  // ...
-}
+```text
+public/media/
+  images/       # 26 canonical images, including project subfolders
+  videos/       # ready for future videos
+  documents/
+    cv.pdf
 ```
 
-## Optional Dispatch-Owned ChatGPT Sign-In
+The CV is served directly at `/media/documents/cv.pdf`. The previous `/Kelvin%20Kwasi%20Kyere.pdf` URL permanently redirects there. Images use `next/image`; case-study images include measured intrinsic dimensions. Do not create separate media repositories.
 
-Import the ready-to-use helpers from `app/chatgpt-auth.ts` when the site needs
-optional or required ChatGPT sign-in:
+## Animation ownership
 
-- Use `getChatGPTUser()` for optional signed-in UI.
-- Use `requireChatGPTUser(returnTo)` for server-rendered pages that should send
-  anonymous visitors through Sign in with ChatGPT.
-- Use `chatGPTSignInPath(returnTo)` and `chatGPTSignOutPath(returnTo)` for
-  browser links or actions.
-- Pass a same-origin relative `returnTo` path for the destination after sign-in
-  or sign-out. The helper validates and safely encodes it.
-- Mark protected pages with `export const dynamic = "force-dynamic"` because
-  they depend on per-request identity headers.
+Behavior components initialize inside React effects, scope GSAP selectors, and revert contexts/matchMedia on unmount. Each owns its own listeners and observers. The single `SmoothScroll` component owns the page Lenis instance and ticker callback. Native project dialogs own independent Lenis instances only while open. All modal tweens and ticker callbacks are removed on close/unmount.
 
-Dispatch owns `/signin-with-chatgpt`, `/signout-with-chatgpt`, `/callback`, the
-OAuth cookies, and identity header injection. Do not implement app routes for
-those reserved paths. Routes that do not import and call the helper remain
-anonymous-compatible.
+`HeroMotion`, `ProjectsMotion`, and `ServicesMotion` preserve the original timeline structure. Service pinning changes at 760px and 620px height. Reduced motion removes pinning/scrubbing and WebGL, retaining readable sections and a static gallery. Three.js is loaded in separate dynamic chunks; gradients pause rendering outside the viewport and all GPU resources are disposed on teardown. Coarse pointers use a smaller portrait dye texture.
 
-SIWC establishes identity only; it does not prove workspace membership. Use the
-Sites hosting platform's access policy controls for workspace-wide restrictions,
-or enforce explicit server-side membership or allowlist checks.
+## Dependency choices
 
-Use SIWC for account pages, user-specific dashboards, saved records, and write
-actions tied to the current ChatGPT user. Leave public content anonymous.
+Next 16.3.4, React 19.2.8, GSAP 3.15.0, Lenis 1.3.26, and Three.js 0.185.1 were verified against npm on 8 September 2026. TypeScript 6.0.3 is the latest compatible compiler for the current lint parser; TypeScript 7.0.2 is not yet supported by it. ESLint 9.39.5 is pinned because the current React lint plugin's peer range does not support ESLint 10. Keep the lockfile and upgrade the toolchain together when compatibility changes.
 
-## Useful Commands
+Fonts retain the original external providers (Google Fonts, Fontshare, CDNFonts). This preserves the original faces without assuming redistribution rights for proprietary fonts. The site needs network access to those providers for the exact typography; system sans-serif fallbacks remain available.
 
-- `npm run dev`: start local development
-- `npm run build`: verify the vinext build output
-- `npm test`: build the starter and verify its rendered loading skeleton
-- `npm run db:generate`: generate Drizzle migrations after schema changes
+## Deployment
 
-## Learn More
+Deploy as a normal Next.js Node application or on a platform with native Next.js support. Run `npm run build` then `npm start`. Keep the Next image optimizer available; this is not configured as a static export. No domain or deployment account was present in the original project, and none has been invented.
 
-- [vinext Documentation](https://github.com/cloudflare/vinext)
-- [Drizzle D1 Guide](https://orm.drizzle.team/docs/get-started/d1-new)
+See `docs/AUDIT.md` for the original audit and cleanup rationale and `docs/VALIDATION.md` for validation results.
