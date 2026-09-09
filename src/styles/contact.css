@@ -1,6 +1,6 @@
 .image-ribbon {
-  height: 85svh;
-  min-height: 400px;
+  height: 100vh;
+  min-height: 0;
   background: transparent;
   display: grid;
   align-items: center;
@@ -201,7 +201,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: stretch;
-    overflow: visible;
+    overflow: clip;
   }
   .image-ribbon-gradient {
     position: absolute;
