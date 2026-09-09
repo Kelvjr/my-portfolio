@@ -14,14 +14,14 @@ export function Contact() {
         and right arrow keys to browse, or Space to pause and resume.
       </span>
       <Gallery />
-      <div className="outro-top">
-        <p className="outro-challenge">
-          Got something that might
-          <br />
-          challenge me?
-        </p>
-      </div>
       <div className="outro-content">
+        <div className="outro-top">
+          <p className="outro-challenge">
+            Got something that might
+            <br />
+            challenge me?
+          </p>
+        </div>
         <div className="outro-bottom">
           <p className="outro-listening">I&apos;m listening.</p>
           <a href="mailto:kelvinkwasikyere5@gmail.com" className="outro-email">

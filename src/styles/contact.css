@@ -117,11 +117,6 @@
 }
 
 .outro-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
   text-align: center;
   padding-top: 8vh;
 }
@@ -214,48 +209,54 @@
 
 @media (max-width: 760px) {
   .image-ribbon {
-    height: auto;
+    height: 100vh;
+    min-height: 0;
     overflow: visible;
+    display: flex;
+    flex-direction: column;
   }
   .image-ribbon-gradient {
-    order: -1;
+    position: absolute;
+    inset: 0;
   }
-  .image-ribbon-stage {
-    order: 1;
+  .outro-content {
+    display: contents;
   }
   .outro-top {
     position: static;
-    order: 0;
-    padding-top: 30px;
-    padding-bottom: 30px;
     text-align: center;
+    padding: 30px 1.5rem;
+    flex-shrink: 0;
+    order: -1;
   }
-  .outro-content {
+  .image-ribbon-stage {
     position: relative;
-    z-index: 5;
-    padding: 0 1.5rem;
-    order: 2;
+    z-index: 1;
+    flex-shrink: 0;
   }
   .outro-bottom {
-    margin-bottom: 0;
-    gap: 12px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 16px;
+    padding: 30px 1.5rem;
     text-align: center;
-    padding-bottom: 30px;
+    flex-shrink: 0;
   }
   .outro-email {
-    margin-top: 50px;
+    margin-top: 34px;
     padding: 12px 20px;
     font-size: 0.8rem;
   }
   .outro-footer {
     position: static;
-    order: 3;
-    left: auto;
-    right: auto;
-    bottom: auto;
+    margin-top: auto;
+    display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1rem;
     text-align: center;
     padding: 20px 1.5rem 1.5rem;
+    flex-shrink: 0;
   }
 }
