@@ -359,6 +359,9 @@
   .hero-outro-img {
     flex: 0 0 34%;
   }
+  .hero-outro-img canvas {
+    display: none;
+  }
   .hero-outro-about {
     padding: 20px 24px;
     justify-content: flex-start;
@@ -389,6 +392,9 @@
     flex: 0 0 50vh;
     height: 50vh;
     min-height: 50vh;
+  }
+  .hero-outro-img canvas {
+    display: none;
   }
   .hero-outro-about {
     flex: 0 0 50vh;
