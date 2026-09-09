@@ -1,9 +1,11 @@
 .image-ribbon {
-  height: 85svh;
-  min-height: 400px;
+  height: 100vh;
+  min-height: 0;
   background: transparent;
-  display: grid;
+  display: flex;
+  flex-direction: column;
   align-items: center;
+  justify-content: center;
   overflow: hidden;
   touch-action: pan-y;
   position: relative;
@@ -92,13 +94,9 @@
 }
 
 .outro-top {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
   text-align: center;
-  padding-top: 8vh;
+  padding: 30px 2rem;
+  flex-shrink: 0;
 }
 
 .outro-challenge {
@@ -111,16 +109,13 @@
 }
 
 .outro-bottom {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  z-index: 5;
   display: flex;
   flex-direction: column;
   align-items: center;
   gap: 0.5rem;
-  margin-bottom: 10vh;
+  padding: 30px 2rem;
+  text-align: center;
+  flex-shrink: 0;
 }
 
 .outro-listening {
@@ -194,52 +189,16 @@
 }
 
 @media (max-width: 760px) {
-  .image-ribbon {
-    height: 100vh;
-    min-height: 0;
-    overflow: visible;
-    display: flex;
-    flex-direction: column;
-    align-items: stretch;
-    justify-content: center;
-  }
-  .image-ribbon-gradient {
-    position: absolute;
-    inset: 0;
-  }
-  .outro-top {
-    position: static;
-    text-align: center;
-    padding: 30px 1.5rem;
-    flex-shrink: 0;
-  }
-  .image-ribbon-stage {
-    flex-shrink: 0;
-  }
-  .outro-bottom {
-    position: static;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 16px;
-    padding: 30px 1.5rem;
-    text-align: center;
-    flex-shrink: 0;
-    margin-bottom: 0;
-  }
   .outro-email {
     margin-top: 34px;
     padding: 12px 20px;
     font-size: 0.8rem;
   }
   .outro-footer {
-    position: absolute;
     bottom: 0;
     left: 0;
     right: 0;
-    display: flex;
     flex-direction: column;
-    align-items: center;
     gap: 1rem;
     text-align: center;
     padding: 20px 1.5rem 1.5rem;
