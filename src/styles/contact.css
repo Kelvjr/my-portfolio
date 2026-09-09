@@ -201,6 +201,7 @@
     display: flex;
     flex-direction: column;
     align-items: stretch;
+    justify-content: center;
   }
   .image-ribbon-gradient {
     position: absolute;
@@ -233,7 +234,6 @@
   }
   .outro-footer {
     position: static;
-    margin-top: auto;
     display: flex;
     flex-direction: column;
     align-items: center;
