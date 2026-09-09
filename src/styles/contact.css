@@ -209,14 +209,14 @@
 
 @media (max-width: 760px) {
   .outro-content {
-    padding: 1.5rem;
+    padding: 1rem 1.5rem;
     justify-content: space-between;
   }
   .outro-top {
-    padding-top: 4vh;
+    padding-top: 2vh;
   }
   .outro-bottom {
-    margin-bottom: 4vh;
+    margin-bottom: 1vh;
   }
   .outro-footer {
     left: 1.5rem;

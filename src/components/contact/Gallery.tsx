@@ -37,7 +37,7 @@ export function Gallery() {
       root.classList.add("ribbon-animated");
       root.style.setProperty("--ribbon-will-change", "transform");
       let width = root.clientWidth;
-      let cardWidth = Math.min(360, Math.max(190, width * 0.235));
+      let cardWidth = Math.min(360, Math.max(width < 760 ? 270 : 190, width * 0.235));
       let gap = Math.max(20, width * 0.035);
       let offset = 0,
         mouseX = 0,
@@ -53,7 +53,7 @@ export function Gallery() {
       let pointerStart: number | null = null;
       const resize = new ResizeObserver(() => {
         width = root.clientWidth;
-        cardWidth = Math.min(360, Math.max(190, width * 0.235));
+        cardWidth = Math.min(360, Math.max(width < 760 ? 270 : 190, width * 0.235));
         gap = Math.max(20, width * 0.035);
         root.style.setProperty("--ribbon-card-width", `${cardWidth}px`);
       });
@@ -207,7 +207,7 @@ export function Gallery() {
             alt={image.alt}
             width={800}
             height={500}
-            sizes="(max-width: 760px) 240px, 360px"
+            sizes="(max-width: 760px) 300px, 360px"
             draggable={false}
           />
         </figure>
