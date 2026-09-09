@@ -213,6 +213,10 @@
 }
 
 @media (max-width: 760px) {
+  .image-ribbon {
+    height: auto;
+    overflow: visible;
+  }
   .image-ribbon-gradient {
     order: -1;
   }
@@ -238,6 +242,11 @@
     text-align: center;
     padding-bottom: 30px;
   }
+  .outro-email {
+    margin-top: 50px;
+    padding: 12px 20px;
+    font-size: 0.8rem;
+  }
   .outro-footer {
     position: static;
     order: 3;
@@ -247,10 +256,6 @@
     flex-direction: column;
     gap: 1rem;
     text-align: center;
-    padding: 0 1.5rem 1.5rem;
-  }
-  .outro-email {
-    padding: 12px 20px;
-    font-size: 0.8rem;
+    padding: 20px 1.5rem 1.5rem;
   }
 }

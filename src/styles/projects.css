@@ -113,7 +113,7 @@
 }
 @media (max-width: 760px) {
   .projects {
-    padding: 0 18px;
+    padding: 40px 18px;
   }
   .projects-heading {
     padding: 28px 0;
