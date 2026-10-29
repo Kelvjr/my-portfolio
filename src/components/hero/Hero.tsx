@@ -73,14 +73,14 @@ export function Hero() {
           <h2 className="about-reveal">About Me</h2>
           <div className="about-copy-reveal">
             <p>
-              My name is Kelvin Kyere, a frontend-focused developer based in
-              Tema, Ghana, with a thing for clean interfaces, thoughtful
-              details, and turning rough ideas into working digital experiences.
+              My name is Kelvin Kyere, a software developer based in Tema,
+              Ghana. I build responsive websites and web applications, from
+              thoughtful interfaces to backend APIs and databases.
             </p>
             <p>
-              I work across websites, web applications, WordPress, branding, and
-              digital products, with a growing focus on building polished
-              frontend experiences backed by solid development.
+              With more than four years of experience, I turn business needs
+              into practical software solutions using tools like React,
+              Next.js, Node.js, and PostgreSQL.
             </p>
             <p>Got something that might challenge me? I&apos;m listening.</p>
           </div>

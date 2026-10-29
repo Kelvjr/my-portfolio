@@ -13,7 +13,7 @@ import "@/styles/grains-case.css";
 import "@/styles/accessibility.css";
 
 const description =
-  "Kelvin Kyere, a frontend-focused developer based in Tema, Ghana. Websites, web applications, WordPress, branding, and digital products.";
+  "Kelvin Kyere, a software developer based in Tema, Ghana. Responsive websites, web applications, backend APIs, and databases.";
 export const metadata: Metadata = {
   title: "Kelvin Kyere | Portfolio",
   description,
